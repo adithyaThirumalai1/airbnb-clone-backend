@@ -37,7 +37,9 @@ app.use("/uploads",express.static(__dirname+"/uploads"))
 
 
 
-await mongoose.connect(process.env.MONGO_URL).then(()=> console.log("DB connection established"));
+await mongoose.connect(process.env.MONGO_URL,{
+    tls:true
+}).then(()=> console.log("DB connection established"));
 
 app.get("/test",(req,res)=>{
     res.send("Test Successful")
