@@ -24,7 +24,7 @@ const salt = bcrypt.genSaltSync(10);
 //const jwtSecret="bfudsjbdfsnfghhj";
 
 const app=express();
-const PORT=5000;
+const PORT=process.env.PORT || 5000;
 
 // ********** MIDDLEWARES ***********
 app.use(express.json());
