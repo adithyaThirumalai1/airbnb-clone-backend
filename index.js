@@ -30,7 +30,7 @@ const PORT=process.env.PORT || 5000;
 app.use(express.json());
 app.use(cors({
     credentials:true,
-    origin:"https://magnificent-cupcake-d9bc16.netlify.app/"
+    origin:"https://airbnb-clone-adithya.netlify.app/"
 }));
 
 app.use("/uploads",express.static(__dirname+"/uploads"))
